@@ -1,0 +1,155 @@
+/* =============================
+   Main Content Styling
+============================= */
+main {
+  padding: 40px 20px; /* Adds spacing around the main content */
+  text-align: center; /* Centers text content horizontally */
+}
+
+main h2 {
+  font-family: 'Playfair Display', serif; /* Stylish heading font */
+  font-size: 32px; /* Large heading size */
+  color: #2e2e2e; /* Dark gray text */
+  margin-bottom: 30px; /* Space below heading */
+}
+
+/* =============================
+   Table Container Styling
+============================= */
+.table-container {
+  overflow-x: auto; /* Allows horizontal scroll on small screens */
+  margin: 0 auto; /* Center the container */
+  width: 95%; /* Responsive width */
+  max-width: 1200px; /* Maximum width for large screens */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(90, 70, 61, 0.2); /* Soft shadow for elevation */
+}
+
+/* =============================
+   Table Styling
+============================= */
+.shop-table {
+  width: 100%; /* Full width table */
+  border-collapse: separate; /* Keep border spacing */
+  border-spacing: 0; /* Remove default space between cells */
+  font-family: 'Hind', sans-serif; /* Clean, readable font */
+  background-color: #fffaf5; /* Light beige background */
+  border-radius: 12px; /* Rounded corners for outer edges */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.shop-table th,
+.shop-table td {
+  border: 1px solid #d4cfc7; /* Soft border color */
+  padding: 12px 15px; /* Cell padding */
+  text-align: center; /* Center text in cells */
+  font-size: 15px; /* Standard font size */
+  color: #3c2f27; /* Deep brown text */
+}
+
+.shop-table thead th {
+  background-color: #d4af37; /* Gold-colored header */
+  font-weight: 600; /* Slightly bolder text */
+  color: #2e2e2e; /* Dark gray text */
+}
+
+.shop-table tbody td {
+  background-color: #fffdf9; /* Slightly off-white row background */
+}
+
+/* =============================
+   Filters Section Styling
+============================= */
+.filters {
+  margin: 20px auto; /* Space above and below filters */
+  display: flex; /* Flex layout for horizontal arrangement */
+  justify-content: center; /* Center filters horizontally */
+  align-items: center; /* Vertically align items */
+  gap: 30px; /* Space between each filter */
+  font-family: 'Hind', sans-serif; /* Matching font */
+  flex-wrap: wrap; /* Wrap filters on smaller screens */
+}
+
+.filters label {
+  font-weight: bold; /* Bold text for labels */
+  color: #5a463d; /* Brownish text color */
+  margin-right: 6px; /* Small gap between label and select */
+  font-size: 16px; /* Slightly larger label text */
+  align-self: center; /* Vertically center label */
+}
+
+.filters select {
+  padding: 8px 12px; /* Space inside dropdown */
+  font-size: 15px; /* Readable font size */
+  border-radius: 6px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light gray border */
+  background-color: #fffdf9; /* Matches table background */
+  font-family: 'Hind', sans-serif; /* Consistent font */
+  outline: none; /* Remove focus outline */
+  cursor: pointer; /* Pointer cursor on hover */
+  appearance: none; /* Remove default arrow */
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23d4af37' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Custom arrow */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-position: right 10px center; /* Arrow position */
+  background-size: 14px; /* Arrow size */
+  padding-right: 30px; /* Space for arrow */
+  max-width: 200px; /* Prevents overly wide dropdowns */
+  color: #d4af37; /* Golden text color */
+}
+
+/* =============================
+   Table Corner Rounding
+============================= */
+
+/* Bottom-left corner rounding for last row first column */
+.shop-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+/* Bottom-right corner rounding for last row last column */
+.shop-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+/* =============================
+   Description Column Width
+============================= */
+
+/* Set fixed width for description column (5th column) */
+.shop-table td:nth-child(5),
+.shop-table th:nth-child(5) {
+  width: 300px; /* Preferred width */
+  min-width: 250px; /* Prevent shrinking too much */
+  text-align: left; /* Align text to left for readability */
+}
+/* =============================
+   SHOP POSTERS — CLEAN MODE
+============================= */
+
+#shopPosters {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin: 40px auto 60px;
+  flex-wrap: wrap;
+}
+
+/* NO BOX, NO BG */
+.shop-poster {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Image rules */
+.shop-poster img {
+  height: 300px;        /* SAME HEIGHT */
+  width: auto;          /* AUTO WIDTH */
+  object-fit: contain; /* FULL IMAGE, NO CUT */
+  display: block;
+   border-radius: 16px;
+}
+
+/* Hover */
+.shop-poster:hover {
+  transform: translateY(-8px);
+}

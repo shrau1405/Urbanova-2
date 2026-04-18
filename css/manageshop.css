@@ -1,0 +1,371 @@
+/* =============================== */
+/* ✅ MAIN CONTENT STYLING        */
+/* =============================== */
+main {
+  padding: 40px 20px; /* Space around main content */
+  text-align: center; /* Center align all child elements */
+}
+
+main h2 {
+  font-family: 'Playfair Display', serif; /* Decorative heading font */
+  font-size: 32px; /* Large heading size */
+  color: #2e2e2e; /* Dark grey text */
+  margin-bottom: 30px; /* Space below heading */
+}
+
+/* =============================== */
+/* ✅ TABLE WRAPPER + STYLING     */
+/* =============================== */
+.table-container {
+  overflow-x: auto; /* Horizontal scroll for small screens */
+  margin: 0 auto; /* Center align */
+  width: 95%; /* Responsive width */
+  max-width: 1200px; /* Max width constraint */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(90, 70, 61, 0.2); /* Subtle shadow */
+}
+
+.shop-table {
+  width: 100%;
+  border-collapse: separate; /* Allows border-radius */
+  border-spacing: 0; /* No spacing between cells */
+  font-family: 'Hind', sans-serif; /* Clean sans-serif font */
+  background-color: #fffaf5; /* Light background */
+  border-radius: 12px; /* Rounded edges */
+  overflow: hidden;
+}
+
+.shop-table th,
+.shop-table td {
+  border: 1px solid #d4cfc7; /* Light border color */
+  padding: 12px 15px; /* Cell padding */
+  text-align: center; /* Center align text */
+  font-size: 15px; /* Consistent text size */
+  color: #3c2f27; /* Text color */
+}
+
+.shop-table thead th {
+  background-color: #2e2e2e; /* Header background */
+  font-weight: 600; /* Bold header */
+  color: #ffffff; /* White text */
+}
+
+.shop-table tbody td {
+  background-color: #fffdf9; /* Body background */
+}
+
+/* =============================== */
+/* ✅ BUTTON STYLING              */
+/* =============================== */
+.edit-btn,
+.delete-btn {
+  background-color: #d4af37; /* Gold background */
+  color: white;
+  border: none;
+  padding: 8px 16px; /* Spacing inside button */
+  margin: 4px 2px; /* Button spacing */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 15px; /* Font size */
+  cursor: pointer;
+  font-family: 'Hind', sans-serif;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  background-color: #5a463d; /* Darker on hover */
+}
+
+.view-btn {
+  background-color: #d4af37; /* Same style as other buttons */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: 'Hind', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #d4af37; /* No color change */
+}
+
+/* =============================== */
+/* ✅ MODAL STYLING               */
+/* =============================== */
+.modal {
+  position: fixed; /* Always stays on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(60, 50, 40, 0.7); /* Dark overlay */
+  display: flex; /* Center modal content */
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Above all content */
+}
+
+.modal-content {
+  background-color: #f8f6f1; /* Light box background */
+  padding: 30px 25px; /* Inside spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(90, 70, 61, 0.3); /* Modal shadow */
+  text-align: center;
+  max-width: 600px; /* Restrict width */
+  width: 90%; /* Responsive */
+  font-family: 'Playfair Display', serif;
+}
+
+/* =============================== */
+/* ✅ DELETE MODAL STYLING        */
+/* =============================== */
+#deleteModal .modal-content p {
+  font-size: 18px;
+  font-family: 'Hind', sans-serif;
+  color: #3c2f27;
+  margin-bottom: 20px;
+}
+
+/* Form elements inside modal */
+.modal-content input,
+.modal-content textarea {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  display: block;
+  font-family: 'Hind', sans-serif;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+.modal-actions button {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-actions button:hover {
+  background-color: #5a463d;
+}
+
+.delete-modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.delete-modal-content {
+  background-color: #fffdf9;
+  margin: 12% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  font-family: 'Hind', sans-serif;
+  border-radius: 10px;
+}
+
+.delete-modal-content p {
+  color: #3c2f27;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.delete-modal-content button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  background-color: #d4af37;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Hind', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.delete-modal-content button:hover {
+  background-color: #e0c350;
+}
+
+/* =============================== */
+/* ✅ FILTERS SECTION             */
+/* =============================== */
+.filters {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: 'Hind', sans-serif;
+  flex-wrap: wrap; /* Wrap filters on small screens */
+}
+
+.filters label {
+  font-weight: bold;
+  color: #5a463d;
+  margin-right: 6px;
+  font-size: 16px;
+  align-self: center;
+}
+
+.filters select {
+  padding: 8px 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fffdf9;
+  font-family: 'Hind', sans-serif;
+  outline: none;
+  cursor: pointer;
+  appearance: none; /* Remove default arrow */
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23d4af37' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+  padding-right: 30px;
+  max-width: 200px;
+  color: #d4af37;
+}
+
+/* =============================== */
+/* ✅ TABLE BORDER RADIUS FIX     */
+/* =============================== */
+.shop-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.shop-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+/* =============================== */
+/* ✅ RESPONSIVE MEDIA QUERIES    */
+/* =============================== */
+@media (max-width: 600px) {
+  main {
+    padding: 30px 10px;
+  }
+
+  main h2 {
+    font-size: 24px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .filters label {
+    font-size: 14px;
+  }
+
+  .filters select {
+    font-size: 14px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .shop-table th,
+  .shop-table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .edit-btn,
+  .delete-btn,
+  .view-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .modal-content {
+    padding: 20px 15px;
+    width: 95%;
+  }
+
+  .modal-content input,
+  .modal-content textarea {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-actions button {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .delete-modal-content {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .delete-modal-content button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .filters {
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .shop-table th,
+  .shop-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .edit-btn,
+  .delete-btn,
+  .view-btn {
+    font-size: 14px;
+  }
+
+  .modal-content {
+    max-width: 90%;
+  }
+}
+
+/* =============================== */
+/* ✅ DESCRIPTION COLUMN WIDTH FIX */
+/* =============================== */
+.shop-table td:nth-child(7),
+.shop-table th:nth-child(7) {
+  width: 300px; /* Force width for long descriptions */
+  min-width: 250px;
+  text-align: left;
+}

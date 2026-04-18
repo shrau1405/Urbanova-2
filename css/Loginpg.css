@@ -1,0 +1,294 @@
+/* ===== Base Styles ===== */
+body {
+  margin: 0; /* Remove default margin */
+  font-family: 'Hind', sans-serif; /* Base font */
+  background-color: #f8f6f1; /* Soft cream background */
+  color: #2e2e2e; /* Dark text color */
+}
+
+/* ===== Header Layout ===== */
+header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and social icons */
+  align-items: center;
+  background-color: #2e2e2e; /* Dark background */
+  padding: 15px 30px;
+  border-bottom: 2px solid #d4af37; /* Gold separator */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+/* Logo section with image and brand text */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image styling */
+.logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  border-radius: 10px;
+  filter: brightness(0) invert(1); /* Make logo white for dark bg */
+}
+
+/* Brand heading */
+.brand-text h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: white;
+}
+
+/* Brand tagline */
+.brand-text p {
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Hind', sans-serif;
+  color: #f0f0f0;
+}
+
+/* Social media icon row */
+.social-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Individual social icons */
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin: 0 6px;
+  text-decoration: none;
+}
+
+/* Pipe separators between icons */
+.social-icons span {
+  color: #f0f0f0;
+  margin: 0 6px;
+  font-size: 20px;
+}
+
+/* ===== Login Container Layout ===== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 160px); /* Full height minus header/footer */
+  padding: 20px;
+}
+
+/* Login box design */
+.login-box {
+  background-color: white;
+  padding: 40px 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #e1dcd2;
+  text-align: center;
+}
+
+/* Login heading */
+.login-box h2 {
+  margin-bottom: 25px;
+  font-family: 'Playfair Display', serif;
+  color: #2e2e2e;
+  font-size: 26px;
+}
+
+/* Form layout */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input fields and button */
+.login-box select,
+.login-box input,
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: 'Hind', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Inputs and select dropdown border */
+.login-box select,
+.login-box input {
+  border: 1px solid #bbb;
+}
+
+/* Button design */
+.login-box button {
+  background-color: #d4af37; /* Gold color */
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.login-box button:hover {
+  background-color: #bfa134;
+}
+
+/* Error message styling */
+.error {
+  text-align: center;
+  color: red;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* ===== Footer Layout ===== */
+footer {
+  background-color: #2e2e2e;
+  color: white;
+  padding: 50px 10%;
+  margin-top: 50px;
+  border-top: 2px solid #d4af37;
+  font-family: 'Hind', sans-serif;
+}
+
+/* Container for footer columns */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  text-align: center;
+}
+
+/* Each footer column */
+.footer-column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+/* Footer headings */
+.footer-column h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Footer text */
+.footer-column p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* =============================== */
+/* ✅ RESPONSIVE MEDIA QUERIES ✅ */
+/* =============================== */
+
+/* === Small Devices (Phones ≤ 480px) === */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .brand-text h1 {
+    font-size: 22px;
+  }
+
+  .brand-text p {
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .login-box {
+    padding: 25px 20px;
+    max-width: 90%;
+  }
+
+  footer {
+    padding: 30px 5%;
+  }
+
+  .footer-column h3 {
+    font-size: 20px;
+  }
+
+  .footer-column p {
+    font-size: 15px;
+  }
+}
+
+/* === Medium Devices (Phones & Small Tablets: 481px – 767px) === */
+@media (max-width: 767px) {
+  .login-box h2 {
+    font-size: 22px;
+  }
+
+  .login-box select,
+  .login-box input,
+  .login-box button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* === Tablets (768px – 1024px) === */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .login-box {
+    max-width: 85%;
+  }
+
+  footer {
+    padding: 40px 8%;
+  }
+
+  .footer-container {
+    gap: 40px;
+  }
+}
+
+/* === Large Screens (≥1441px) === */
+@media (min-width: 1441px) {
+  .login-box {
+    max-width: 460px;
+    padding: 50px 40px;
+  }
+
+  .footer-container {
+    gap: 100px;
+  }
+}
+
+/* ===== Full-height Layout Fix ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Let main content grow and push footer down */
+}

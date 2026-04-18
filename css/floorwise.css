@@ -1,0 +1,186 @@
+/* Main content container */
+main {
+  padding: 40px 20px; /* Add spacing around main content */
+  text-align: center; /* Center all text inside main */
+}
+
+/* Heading styling */
+main h2 {
+  font-family: 'Playfair Display', serif; /* Elegant font for headings */
+  font-size: 32px; /* Large font size */
+  color: #2e2e2e; /* Dark gray color */
+  margin-bottom: 30px; /* Space below heading */
+}
+
+/* ============================= */
+/* Floor Flip Card Layout */
+/* ============================= */
+
+#floorList {
+  display: grid;
+  grid-template-columns: repeat(2, 480px); /* exactly 2 cards per row */
+  justify-content: center; /* center the 2 cards */
+  gap: 40px;
+  margin: 0 auto 60px;
+  padding: 20px;
+}
+
+/* Flip card wrapper */
+.category-card {
+  width: 100%;
+  height: 220px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+/* Quick fix for 2x2 alignment using nth-child */
+#floorList .category-card:nth-child(3) {
+  margin-left: 0; /* align exactly under first column */
+}
+
+#floorList .category-card:nth-child(4) {
+  margin-left: 0; /* align exactly under second column */
+}
+
+/* Inner flip container */
+.category-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+/* Flip on hover */
+.category-card:hover .category-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back common */
+.category-front,
+.category-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 14px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  font-family: 'Hind', sans-serif;
+}
+
+/* Front side */
+.category-front {
+  background: linear-gradient(135deg, #d4af37, #f1d27a);
+  color: #2e231b;
+}
+
+.category-front h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+/* Back side */
+.category-back {
+  background-color: #2e2e2e;
+  color: #f5f5f5;
+  transform: rotateY(180deg);
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.category-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+.category-back li {
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.category-back h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+/* ============================= */
+/* ✅ RESPONSIVE MEDIA QUERIES ✅ */
+/* ============================= */
+
+/* Small Devices (≤ 600px) */
+@media (max-width: 600px) {
+  main {
+    padding: 30px 10px; /* Reduce padding on smaller screens */
+  }
+
+  main h2 {
+    font-size: 22px; /* Smaller heading */
+    margin-bottom: 20px; /* Less spacing below heading */
+  }
+
+  .table-container {
+    width: 100%; /* Full width for small screens */
+    overflow-x: auto; /* Allow horizontal scroll */
+    margin: 0 auto 30px; /* Bottom margin */
+    box-sizing: border-box; /* Include padding/border in width */
+  }
+
+  .shop-table {
+    width: 100%; /* Table takes full container width */
+    border-spacing: 0; /* No spacing */
+    font-size: 13px; /* Smaller text */
+  }
+
+  .shop-table th,
+  .shop-table td {
+    font-size: 13px; /* Smaller text */
+    padding: 8px 10px; /* Smaller padding */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  /* Footer becomes stacked and centered */
+  .footer-container {
+    flex-direction: column; /* Stack vertically */
+    gap: 25px; /* Space between columns */
+    text-align: center; /* Center text */
+    padding: 20px; /* Inner spacing */
+  }
+
+  .footer-column {
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+/* Medium Devices (≤ 1024px) */
+@media (max-width: 1024px) {
+  main h2 {
+    font-size: 26px; /* Adjust heading size for medium screens */
+  }
+
+  .table-container {
+    width: 95%; /* Slightly reduce width */
+    max-width: 100%; /* Allow full container width */
+    margin: 0 auto 40px; /* Margin below table */
+  }
+
+  /* Footer layout adjusts for tablets */
+  .footer-container {
+    flex-wrap: wrap; /* Allow wrapping of columns */
+    justify-content: center; /* Center columns */
+  }
+
+  .footer-column {
+    flex: 1 1 45%; /* Each takes ~half the width */
+    text-align: center; /* Centered content */
+  }
+}

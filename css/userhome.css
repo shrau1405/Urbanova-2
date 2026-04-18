@@ -1,0 +1,209 @@
+/* =============================== */
+/* ✅ MAIN CONTENT STYLING ✅ */
+/* =============================== */
+
+main {
+  padding: 50px 20px; /* Top/bottom and side spacing */
+  text-align: center; /* Center align heading and content */
+}
+
+main h2 {
+  font-family: 'Playfair Display', serif; /* Elegant font */
+  font-size: 32px; /* Large heading */
+  color: #5a463d; /* Dark brown color */
+  margin-bottom: 40px; /* Space below heading */
+}
+
+/* =============================== */
+/* ✅ NAVIGATION BUTTON GROUP ✅ */
+/* =============================== */
+
+.user-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* =============================== */
+/* ✅ NAVIGATION BUTTON STYLING ✅ */
+/* =============================== */
+
+.nav-btn {
+  background-color: #d4af37;
+  color: white;
+
+  padding: 16px 28px;
+  font-size: 17px;
+  font-family: 'Hind', sans-serif;
+
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  width: 100%;
+  max-width: 700px;
+
+  text-align: center;
+
+  transition: 
+    background-color 0.3s ease,
+    transform 0.25s ease;
+
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+
+/* Hover effect for nav button */
+.nav-btn:hover {
+  background-color: #5a463d; /* Dark brown on hover */
+}
+
+/* =============================== */
+/* ✅ RESPONSIVE STYLES - MOBILE ✅ */
+/* =============================== */
+
+@media (max-width: 600px) {
+  main h2 {
+    font-size: 24px; /* Smaller heading on mobile */
+    margin-bottom: 25px; /* Less space */
+  }
+
+  .user-options {
+    flex-direction: column; /* Stack vertically */
+    gap: 15px;
+    align-items: center; /* Center buttons */
+  }
+
+  .nav-btn {
+    font-size: 15px;
+    padding: 12px 20px;
+    min-width: 90%; /* Fill width */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Stack footer */
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-column {
+    width: 100%; /* Full width columns */
+  }
+}
+
+/* =============================== */
+/* ✅ RESPONSIVE STYLES - TABLET ✅ */
+/* =============================== */
+
+@media (max-width: 1024px) {
+  .nav-btn {
+    font-size: 15px;
+    min-width: 200px; /* Smaller min width on tablets */
+  }
+
+  main h2 {
+    font-size: 28px; /* Slightly smaller heading */
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-column {
+    flex: 1 1 45%; /* Two-column layout */
+    text-align: center;
+  }
+}
+
+/* =============================== */
+/* ✅ FADE-IN ANIMATION KEYFRAME ✅ */
+/* =============================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Move up */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Original position */
+  }
+}
+
+/* =============================== */
+/* ✅ ANIMATED NAV BUTTONS ✅ */
+/* =============================== */
+
+.user-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* Base style with animation */
+.nav-btn {
+  background-color: #d4af37;
+  color: white;
+
+  padding: 16px 28px;
+  font-size: 17px;
+  font-family: 'Hind', sans-serif;
+
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  width: 100%;
+  max-width: 700px;
+
+  text-align: center;
+
+  transition: 
+    background-color 0.3s ease,
+    transform 0.25s ease;
+
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+
+/* Add staggered delay for each button */
+.nav-btn:nth-child(1) { animation-delay: 0.2s; }
+.nav-btn:nth-child(2) { animation-delay: 0.4s; }
+.nav-btn:nth-child(3) { animation-delay: 0.6s; }
+.nav-btn:nth-child(4) { animation-delay: 0.8s; }
+.nav-btn:nth-child(5) { animation-delay: 1s; }
+.nav-btn:nth-child(6) { animation-delay: 1.2s; }
+.nav-btn:nth-child(7) { animation-delay: 1.4s; }
+
+.nav-btn:hover {
+  background-color: #5a463d;
+}
+
+/* =============================== */
+/* ✅ ANIMATE MAIN HEADING ✅ */
+/* =============================== */
+
+main h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #5a463d;
+  margin-bottom: 40px;
+  opacity: 0; /* Hidden initially */
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0s; /* Appear first */
+}

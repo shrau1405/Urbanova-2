@@ -1,0 +1,157 @@
+/* Style for main content area */
+main {
+  padding: 40px 20px;           /* Add spacing around the content */
+  text-align: center;           /* Center-align text inside <main> */
+}
+
+/* Style for the page heading inside <main> */
+main h2 {
+  font-family: 'Playfair Display', serif; /* Use elegant serif font */
+  font-size: 32px;                        /* Large font size for heading */
+  color: #2e2e2e;                         /* Dark gray text color */
+  margin-bottom: 30px;                    /* Space below heading */
+}
+
+/* Container for filter dropdowns */
+.filters {
+  margin: 20px auto;                      /* Center the filter bar with vertical spacing */
+  display: flex;                          /* Use flexbox layout */
+  justify-content: center;               /* Center items horizontally */
+  align-items: center;                   /* Align items vertically */
+  gap: 30px;                              /* Space between filter items */
+  font-family: 'Hind', sans-serif;       /* Use clean sans-serif font */
+  flex-wrap: wrap;                        /* Wrap filters on smaller screens */
+}
+
+/* Style for filter labels */
+.filters label {
+  font-weight: bold;                     /* Make label text bold */
+  color: #5a463d;                        /* Brownish text color */
+  margin-right: 6px;                     /* Small gap between label and select */
+  font-size: 16px;                       /* Font size for labels */
+  align-self: center;                    /* Vertically align with dropdown */
+}
+
+/* Style for <select> dropdowns */
+.filters select {
+  padding: 8px 12px;                     /* Inner spacing */
+  font-size: 15px;                       /* Font size for options */
+  border-radius: 6px;                    /* Rounded corners */
+  border: 1px solid #ccc;                /* Light gray border */
+  background-color: #fffdf9;             /* Light cream background */
+  font-family: 'Hind', sans-serif;       /* Consistent font */
+  outline: none;                         /* Remove blue outline on focus */
+  cursor: pointer;                       /* Pointer cursor on hover */
+  appearance: none;                      /* Remove default arrow */
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23d4af37' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Custom arrow icon */
+  background-repeat: no-repeat;          /* Prevent repeating icon */
+  background-position: right 10px center;/* Position arrow inside select */
+  background-size: 14px;                 /* Size of custom arrow */
+  padding-right: 30px;                   /* Space for arrow icon */
+  max-width: 200px;                      /* Prevent overly wide dropdown */
+  color: #d4af37;                        /* Golden text color */
+}
+
+/* Container to allow horizontal scrolling of table on small screens */
+.table-container {
+  width: 100%;                           /* Full width container */
+  overflow-x: auto;                      /* Enable horizontal scroll if needed */
+  margin: 0 auto 50px;                   /* Center and give bottom spacing */
+  padding-bottom: 15px;                  /* Space below table for breathing room */
+}
+
+/* Shop table styles */
+.shop-table {
+  width: max-content;                    /* Table grows to fit content */
+  min-width: 800px;                      /* Set minimum width */
+  border-collapse: separate;             /* Use separate borders */
+  border-spacing: 0;                     /* Remove extra spacing */
+  font-family: 'Hind', sans-serif;       /* Use clean font */
+  background-color: #fffaf5;             /* Light background */
+  border-radius: 12px;                   /* Rounded corners */
+  overflow: hidden;                      /* Hide overflow corners */
+  margin: 0 auto;                        /* Center the table */
+}
+
+/* Table cell (both th and td) styles */
+.shop-table th,
+.shop-table td {
+  border: 1px solid #d4cfc7;             /* Light border color */
+  padding: 12px 15px;                    /* Spacing inside cells */
+  text-align: center;                    /* Centered text */
+  font-size: 15px;                       /* Readable font size */
+  color: #3c2f27;                        /* Dark brown text */
+  white-space: nowrap;                   /* Prevent line break in cell */
+}
+
+/* Header row styling */
+.shop-table thead th {
+  background-color: #d4af37;             /* Golden background */
+  font-weight: 600;                      /* Bold text */
+  color: #2e2e2e;                        /* Dark gray text */
+}
+
+/* Table body row background */
+.shop-table tbody td {
+  background-color: #fffdf9;             /* Soft cream color for body rows */
+}
+
+
+/* ============================= */
+/* ✅ RESPONSIVE MEDIA QUERIES ✅ */
+/* ============================= */
+
+/* Small Devices (phones, ≤ 600px) */
+@media (max-width: 600px) {
+  main {
+    padding: 30px 10px;                  /* Reduce padding for small screens */
+  }
+
+  main h2 {
+    font-size: 22px;                     /* Smaller heading font */
+    margin-bottom: 20px;                 /* Less margin below heading */
+  }
+
+  .filters {
+    gap: 15px;                           /* Reduce spacing between filters */
+    padding: 10px;                       /* Add padding inside filter area */
+  }
+
+  .filters label {
+    font-size: 14px;                     /* Smaller label text */
+  }
+
+  .filters select {
+    font-size: 14px;                     /* Smaller dropdown text */
+    padding: 6px 10px;                   /* Adjust spacing */
+    padding-right: 28px;                 /* Space for icon */
+  }
+
+  .footer-container {
+    flex-direction: column;              /* Stack footer columns */
+    gap: 25px;                           /* Space between sections */
+    text-align: center;                  /* Center text */
+    padding: 20px;                       /* Padding around footer */
+  }
+
+  .footer-column {
+    width: 100%;                         /* Full width columns */
+  }
+}
+
+/* Medium Devices (tablets/laptops, ≤ 1024px) */
+@media (max-width: 1024px) {
+  main h2 {
+    font-size: 26px;                     /* Medium font for heading */
+  }
+
+  .footer-container {
+    flex-wrap: wrap;                     /* Allow wrapping footer content */
+    justify-content: center;             /* Center the wrapped items */
+  }
+
+  .footer-column {
+    flex: 1 1 45%;                       /* Take 45% width with wrapping */
+    text-align: center;                  /* Center text in each column */
+  }
+}

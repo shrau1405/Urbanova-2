@@ -1,0 +1,85 @@
+/* ===== Main Container Styling ===== */
+main {
+  padding: 40px 20px; /* Outer spacing for the main content */
+  text-align: center; /* Center align text inside main */
+}
+
+/* ===== Main Heading Styling ===== */
+main h2 {
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  font-size: 32px; /* Large font size */
+  color: #2e2e2e; /* Dark gray text */
+  margin-bottom: 30px; /* Space below heading */
+}
+
+/* ===== Comparison Section Styling ===== */
+#comparisonContainer {
+  margin-top: 50px; /* Space above comparison section */
+}
+
+/* ===== Comparison Heading ===== */
+#comparisonContainer h3 {
+  font-family: 'Playfair Display', serif; /* Use Playfair for heading */
+  font-size: 26px; /* Slightly smaller than main h2 */
+  color: #3c2f27; /* Rich brown text */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+/* ===== Table Wrapper Styling ===== */
+.table-container {
+  width: 100%; /* Full width */
+  overflow-x: auto; /* Enable horizontal scroll on small screens */
+  margin: 0 auto 50px; /* Centered with bottom spacing */
+  padding-bottom: 15px; /* Padding at bottom */
+  box-sizing: border-box; /* Include padding in total width */
+}
+
+/* ===== Table Base Styling ===== */
+.shop-table {
+  width: 95%; /* Slightly less than full width */
+  max-width: 1200px; /* Maximum width constraint */
+  margin: 0 auto; /* Center align table */
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow (e.g., rounded corners) */
+  font-family: 'Hind', sans-serif; /* Clean and modern font */
+  border-collapse: separate; /* Allow border radius with separate borders */
+  border-spacing: 0; /* Remove default spacing */
+  background-color: #fffaf5; /* Light cream background */
+}
+
+/* ===== Table Cell Styling ===== */
+.shop-table th,
+.shop-table td {
+  border: 1px solid #d4cfc7; /* Light brown border */
+  padding: 12px 15px; /* Inner spacing */
+  text-align: center; /* Center align text */
+  font-size: 15px; /* Standard font size */
+  color: #3c2f27; /* Text color matching theme */
+}
+
+/* ===== Table Header Styling ===== */
+.shop-table thead th {
+  background-color: #d4af37; /* Urbanova gold */
+  font-weight: 600; /* Semi-bold headers */
+  color: #2e2e2e; /* Dark text for contrast */
+}
+
+/* ===== Table Body Styling ===== */
+.shop-table tbody td {
+  background-color: #fffdf9; /* Slightly lighter cream background */
+}
+
+/* ===== Checkbox Styling ===== */
+input[type="checkbox"] {
+  transform: scale(1.2); /* Enlarge checkbox size */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* ===== Rounded Corners for Bottom Row ===== */
+.shop-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px; /* Round bottom-left cell */
+}
+
+.shop-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px; /* Round bottom-right cell */
+}

@@ -1,0 +1,56 @@
+/* Main section styling */
+main {
+  padding: 40px 20px; /* Space inside main: 40px top/bottom, 20px left/right */
+  text-align: center; /* Center-align text inside main */
+}
+
+/* Main heading (h2) styling */
+main h2 {
+  font-family: 'Playfair Display', serif; /* Use serif font for elegant style */
+  font-size: 32px; /* Large font size for heading */
+  color: #2e2e2e; /* Dark gray text color */
+  margin-bottom: 30px; /* Space below heading */
+}
+
+/* Table wrapper for scroll and layout */
+.table-container {
+  overflow-x: auto; /* Enable horizontal scroll if table overflows */
+  margin: 0 auto; /* Center the table horizontally */
+  width: 95%; /* Set width to 95% of container */
+  max-width: 1200px; /* Limit max width for large screens */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(90, 70, 61, 0.2); /* Soft shadow around the table */
+}
+
+/* Table base styles */
+.shop-table {
+  width: 100%; /* Full width */
+  border-collapse: separate; /* Keep borders separate to allow radius */
+  border-spacing: 0; /* No spacing between cells */
+  font-family: 'Hind', sans-serif; /* Clean, readable font */
+  background-color: #fffaf5; /* Light cream background */
+  border-radius: 12px; /* Rounded edges */
+  overflow: hidden; /* Hide overflow beyond corners */
+}
+
+/* Styles for all table header and data cells */
+.shop-table th,
+.shop-table td {
+  border: 1px solid #d4cfc7; /* Light border color */
+  padding: 12px 15px; /* Spacing inside cells */
+  text-align: center; /* Center align content */
+  font-size: 15px; /* Standard readable font size */
+  color: #3c2f27; /* Dark brownish text */
+}
+
+/* Table header row specific styles */
+.shop-table thead th {
+  background-color: #d4af37; /* Golden background for headers */
+  font-weight: 600; /* Bold text */
+  color: #2e2e2e; /* Dark text for contrast */
+}
+
+/* Table body cell background */
+.shop-table tbody td {
+  background-color: #fffdf9; /* Slightly off-white background for readability */
+}

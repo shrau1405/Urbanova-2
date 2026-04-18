@@ -1,0 +1,102 @@
+/* ======== Main Section Styling ======== */
+main {
+  padding: 40px 20px; /* Space inside the main container (top/bottom 40px, left/right 20px) */
+  text-align: center; /* Center-align text inside the main section */
+}
+
+main h2 {
+  font-family: 'Playfair Display', serif; /* Stylish serif font for heading */
+  font-size: 32px; /* Large font size for heading */
+  color: #2e2e2e; /* Dark gray color */
+  margin-bottom: 30px; /* Space below the heading */
+}
+
+/* ======== Shop Details Box Styling ======== */
+.details-box {
+  margin: 30px auto; /* Vertical margin + auto centering horizontally */
+  background-color: #fffaf5; /* Light off-white background */
+  padding: 25px 30px; /* Internal padding: top/bottom 25px, left/right 30px */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(90, 70, 61, 0.2); /* Soft shadow for depth */
+  max-width: 600px; /* Limit width for readability */
+  text-align: left; /* Align text to the left inside details box */
+  font-family: 'Hind', sans-serif; /* Clean, modern font for body text */
+  display: none; /* Hidden by default, shown dynamically */
+}
+
+.details-box h3 {
+  font-family: 'Playfair Display', serif; /* Consistent heading font */
+  font-size: 24px; /* Slightly smaller than main heading */
+  margin-bottom: 15px; /* Space below the heading */
+  color: #3c2f27; /* Dark brownish color */
+}
+
+.details-box p {
+  margin: 8px 0; /* Vertical spacing between paragraphs */
+  font-size: 16px; /* Standard readable font size */
+  color: #3c2f27; /* Same dark color for text */
+}
+
+/* ======== Shop Table Container Styling ======== */
+.table-container {
+  width: 100%; /* Full width of the parent */
+  display: flex; /* Flex container to align table centrally */
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Space above the table */
+}
+
+/* ======== Shop Table Styling ======== */
+.shop-table {
+  width: 100%; /* Full width initially */
+  max-width: 600px; /* Limit max width to keep table compact */
+  border-collapse: separate; /* Prevent border merging (allows spacing) */
+  border-spacing: 0; /* No space between cells */
+  font-family: 'Hind', sans-serif; /* Clean sans-serif font */
+  background-color: #fffaf5; /* Light background color */
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow for rounded corners */
+}
+
+/* Common styling for table headers and cells */
+.shop-table th,
+.shop-table td {
+  border: 1px solid #d4cfc7; /* Light gray border */
+  padding: 12px 15px; /* Spacing inside cells */
+  text-align: center; /* Center align all cell content */
+  font-size: 15px; /* Medium font size */
+  color: #3c2f27; /* Consistent dark text color */
+}
+
+/* Header row specific styling */
+.shop-table thead th {
+  background-color: #d4af37; /* Gold-colored header */
+  font-weight: 600; /* Bold text */
+  color: #2e2e2e; /* Dark gray text */
+}
+
+/* Body rows specific background */
+.shop-table tbody td {
+  background-color: #fffdf9; /* Slightly off-white for alternating contrast */
+}
+
+/* Ensure vertical centering inside each table cell */
+.shop-table td {
+  vertical-align: middle; /* Align content to vertical center */
+}
+
+/* Label inside each cell (if used for clickable checkbox/text pairs) */
+.shop-table td label {
+  display: inline-flex; /* Align icon and text inline with flex */
+  align-items: center; /* Vertically center inside label */
+  justify-content: center; /* Center horizontally */
+  gap: 10px; /* Space between checkbox and label text */
+  width: 100%; /* Full width label */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styling for checkboxes inside table */
+.shop-table input[type="checkbox"] {
+  transform: scale(1.2); /* Slightly enlarge checkboxes */
+  accent-color: #d4af37; /* Golden accent color for checked state */
+  cursor: pointer; /* Pointer cursor on hover */
+}

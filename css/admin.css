@@ -1,0 +1,99 @@
+/* ===== Animation Keyframe: Fade In from Bottom ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px); /* Start slightly below */
+  }
+  to {
+    opacity: 1; /* End fully visible */
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+/* ===== Main Section Styling ===== */
+main {
+  padding: 40px 20px; /* Space around content */
+  text-align: center; /* Center align heading and buttons */
+}
+
+/* ===== Animate Heading on Load ===== */
+main h2 {
+  font-family: 'Playfair Display', serif; /* Stylish font for heading */
+  font-size: 32px; /* Large heading size */
+  color: #2e2e2e; /* Dark gray text */
+  margin-bottom: 30px; /* Space below heading */
+
+  opacity: 0; /* Start invisible */
+  animation: fadeInUp 0.6s ease forwards; /* Apply fadeInUp animation */
+  animation-delay: 0s; /* Immediate animation for heading */
+}
+
+/* ===== Admin Buttons Container ===== */
+.admin-options {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center the column */
+  gap: 24px; /* Space between buttons */
+}
+
+/* ===== Individual Admin Buttons ===== */
+.admin-btn {
+  background-color: #d4af37; /* Gold background */
+  color: white; /* White text */
+  padding: 18px 40px; /* Button size */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 20px;
+  font-family: 'Hind', sans-serif;
+  border: none;
+  width: 320px;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-decoration: none; /* Remove link underline */
+
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 0.6s ease forwards; /* Animate into view */
+}
+
+/* ===== Delays for Button Animations ===== */
+.admin-btn:nth-child(1) { animation-delay: 0.2s; } /* First button */
+.admin-btn:nth-child(2) { animation-delay: 0.4s; } /* Second button */
+.admin-btn:nth-child(3) { animation-delay: 0.6s; } /* Third button */
+.admin-btn:nth-child(4) { animation-delay: 0.8s; } /* Fourth button */
+
+/* ===== Hover Effect for Admin Buttons ===== */
+.admin-btn:hover {
+  background-color: #bfa134; /* Slightly darker gold */
+  cursor: pointer;
+}
+
+/* ============== RESPONSIVENESS ============== */
+
+/* ===== Small Devices: Phones (≤600px) ===== */
+@media (max-width: 600px) {
+  main {
+    padding: 30px 10px; /* Reduced padding */
+  }
+
+  main h2 {
+    font-size: 24px; /* Smaller heading */
+  }
+
+  .admin-btn {
+    font-size: 16px; /* Smaller text */
+    padding: 14px 25px; /* Smaller buttons */
+    width: 90%; /* Full width on small screens */
+    max-width: 320px; /* Limit to prevent stretching */
+  }
+}
+
+/* ===== Tablets & Medium Screens (≤1024px) ===== */
+@media (max-width: 1024px) {
+  .admin-options {
+    gap: 18px; /* Less gap between buttons */
+  }
+
+  .admin-btn {
+    font-size: 18px;
+    padding: 16px 30px; /* Slightly smaller padding */
+  }
+}

@@ -1,0 +1,64 @@
+/* ===== Main Section Styling ===== */
+main {
+  padding: 50px 20px; /* Space around main content */
+  background-color: #fefcf9; /* Light off-white background */
+  font-family: 'Hind', sans-serif; /* Base font for content */
+  text-align: center; /* Center align heading */
+}
+
+/* Main Heading */
+main h2 {
+  font-family: 'Playfair Display', serif; /* Elegant serif font for title */
+  font-size: 30px; /* Large size */
+  color: #2e2e2e; /* Dark gray */
+  margin-bottom: 40px; /* Space below heading */
+}
+
+/* ===== Shop Form Styling ===== */
+.shop-form {
+  max-width: 600px; /* Limit form width for readability */
+  margin: 0 auto; /* Center form horizontally */
+  background-color: white; /* White form background */
+  padding: 35px 40px; /* Inner spacing */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically */
+  gap: 18px; /* Space between form elements */
+}
+
+/* ===== Input, Select, and Textarea Fields ===== */
+.shop-form input,
+.shop-form select,
+.shop-form textarea {
+  font-family: 'Hind', sans-serif; /* Consistent font */
+  font-size: 16px; /* Readable text */
+  padding: 12px; /* Inner padding */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded edges */
+  width: 100%; /* Full width of form */
+  box-sizing: border-box; /* Include padding/border in total width */
+}
+
+/* Prevent textarea from being resizable */
+.shop-form textarea {
+  resize: none;
+}
+
+/* ===== Submit Button Styling ===== */
+.shop-form button {
+  background-color: #d4af37; /* Gold background */
+  color: white; /* White text */
+  font-size: 18px; /* Slightly larger font */
+  font-family: 'Hind', sans-serif; /* Consistent font */
+  border: none;
+  padding: 14px; /* Button size */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Button hover effect */
+.shop-form button:hover {
+  background-color: #bfa134; /* Slightly darker gold on hover */
+}

@@ -1,0 +1,591 @@
+/* ===== Base Styles ===== */
+body {
+  margin: 0; /* Remove default margin */
+  font-family: 'Hind', sans-serif; /* Base font */
+  background-color: #f8f6f1; /* Soft cream background */
+  color: #2e2e2e; /* Dark text color */
+}
+
+/* ===== Header Layout ===== */
+header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and social icons */
+  align-items: center;
+  background-color: #2e2e2e; /* Dark background */
+  padding: 15px 30px;
+  border-bottom: 2px solid #d4af37; /* Gold separator */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+/* Logo section with image and brand text */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image styling */
+.logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  border-radius: 10px;
+  filter: brightness(0) invert(1); /* Make logo white for dark bg */
+}
+
+/* Brand heading */
+.brand-text h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: white;
+}
+
+/* Brand tagline */
+.brand-text p {
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Hind', sans-serif;
+  color: #f0f0f0;
+}
+
+/* Social media icon row */
+.social-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Individual social icons */
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin: 0 6px;
+  text-decoration: none;
+}
+
+/* Pipe separators between icons */
+.social-icons span {
+  color: #f0f0f0;
+  margin: 0 6px;
+  font-size: 20px;
+}
+
+.section {
+  padding: 50px 20px; /* Section spacing */
+  text-align: center; /* Center align content */
+  max-width: 1000px; /* Limit width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif; /* Serif font for headings */
+  font-size: 32px; /* Large heading */
+  color: #2e2e2e; /* Dark gray color */
+  margin-bottom: 20px;
+}
+
+.section p, .section li {
+  font-size: 17px;
+  color: #3c2f27; /* Rich brown text */
+  margin-bottom: 10px;
+}
+
+/* ===== Subnav Styling ===== */
+.subnav {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space between links */
+  background-color: #d4af37; /* Gold background */
+  padding: 12px 0;
+  position: sticky; /* Stick to top on scroll */
+  top: 0;
+  z-index: 100; /* Appear above other content */
+}
+
+.subnav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.subnav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Gallery Styling ===== */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Wrap for responsiveness */
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(90, 70, 61, 0.2); /* Soft shadow */
+}
+
+/* ===== Footer Styling ===== */
+footer {
+  background-color: #2e2e2e; /* Dark background */
+  color: white;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+.footer-cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-cols .col {
+  flex: 1;
+  min-width: 220px;
+}
+
+footer h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-family: 'Hind', sans-serif;
+  margin: 5px 0;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+/* ===== Home Section Enhancements ===== */
+.intro-text {
+  max-width: 900px;
+  margin: 0 auto 35px;
+  font-size: 20px;
+  line-height: 1.9;
+  color: #3c2f27;
+}
+
+/* ===== Login Button Styling ===== */
+.login-btn {
+  background-color: #d4af37;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Hind', sans-serif;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.login-btn:hover {
+  background-color: #5a463d;
+}
+
+/* ===== Title and Tagline Styling ===== */
+.urbanova-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #2e2e2e;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.urbanova-tagline {
+  font-family: 'Hind', sans-serif;
+  font-size: 22px;
+  color: #d4af37;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ===== Facility Grid & Cards ===== */
+.facility-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.facility-card {
+  background-color: #fffdf9;
+  border: 1px solid #e0dcd2;
+  border-radius: 12px;
+  padding: 25px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(90, 70, 61, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+  transform: translateY(-5px);
+}
+
+.facility-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.facility-card h4 {
+  font-size: 18px;
+  color: #2e2e2e;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.facility-card p {
+  font-size: 15px;
+  color: #3c2f27;
+  font-family: 'Hind', sans-serif;
+}
+
+/* ===== Masonry Gallery ===== */
+.masonry-gallery {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 20px;
+}
+
+.masonry-gallery img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(90, 70, 61, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.masonry-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Adjust columns based on screen size */
+@media (max-width: 1024px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+
+/* ===== Fullwidth Gallery Section ===== */
+#gallery {
+  padding: 60px 20px;
+  background-color: #fffaf5;
+}
+
+.gallery-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #2e2e2e;
+  margin-bottom: 40px;
+}
+
+.fullwidth-gallery {
+  column-count: 4;
+  column-gap: 15px;
+  padding: 0 20px;
+}
+
+.fullwidth-gallery img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  break-inside: avoid;
+}
+
+.fullwidth-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive breakpoints for fullwidth gallery */
+@media (max-width: 1200px) {
+  .fullwidth-gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .fullwidth-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .fullwidth-gallery {
+    column-count: 1;
+  }
+}
+
+/* ===== Reviews Section ===== */
+#reviews {
+  padding: 60px 20px;
+  background-color: #fffdf9;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #2e2e2e;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(90, 70, 61, 0.15);
+  padding: 25px 20px;
+  text-align: left;
+  font-family: 'Hind', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-card h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #2e2e2e;
+  font-weight: 600;
+}
+
+.review-card p {
+  font-size: 15px;
+  color: #3c2f27;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: #d4af37;
+  font-size: 18px;
+}
+
+/* ===== Slider Styling ===== */
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60vh;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  flex: 0 0 100%; /* Each slide takes 100% width */
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Fit image without cropping */
+}
+
+/* Arrows */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(90, 70, 61, 0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 6px;
+}
+
+.slider-btn:hover {
+  background-color: #5a463d;
+}
+
+.slider-btn.prev {
+  left: 20px;
+}
+
+.slider-btn.next {
+  right: 20px;
+}
+
+/* ========================= */
+/* ✅ RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Header logo & tagline stack for mobile */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .brand-text h1 {
+    font-size: 22px;
+  }
+
+  .brand-text p {
+    font-size: 12px;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .subnav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 5px;
+  }
+
+  .subnav a {
+    font-size: 14px;
+  }
+
+  .urbanova-title {
+    font-size: 32px;
+  }
+
+  .urbanova-tagline {
+    font-size: 16px;
+  }
+
+  .slider-wrapper {
+    height: 40vh;
+  }
+
+  .login-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Facilities grid adapts for tablets */
+@media (max-width: 768px) {
+  .facility-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .facility-card {
+    width: 80%;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+  }
+}
+
+/* Footer stacks vertically on smaller screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 10px;
+  }
+
+  .footer-column h3 {
+    font-size: 18px;
+  }
+
+  .footer-column p {
+    font-size: 15px;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
+}
+/* ===== Footer Layout ===== */
+footer {
+  background-color: #2e2e2e;
+  color: white;
+  padding: 50px 10%;
+  margin-top: 50px;
+  border-top: 2px solid #d4af37;
+  font-family: 'Hind', sans-serif;
+}
+
+/* Container for footer columns */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  text-align: center;
+}
+
+/* Each footer column */
+.footer-column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+/* Footer headings */
+.footer-column h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Footer text */
+.footer-column p {
+  font-size: 17px;
+  line-height: 1.8;
+}

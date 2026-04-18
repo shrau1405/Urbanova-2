@@ -1,0 +1,511 @@
+/* =============================== */
+/* ✅ Shared Login Page Styling ✅ */
+/* =============================== */
+
+/* Reuse loginpg.css for header/footer and form styling */
+
+/* =============================== */
+/* ✅ Form Container ✅ */
+/* =============================== */
+
+/* Main form wrapper */
+.form-container {
+  width: 90%; /* Make it responsive on smaller screens */
+  max-width: 600px; /* Limit form width */
+  margin: 30px auto; /* Center horizontally with spacing from top */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack inputs vertically */
+  gap: 15px; /* Spacing between elements */
+  font-family: 'Hind', sans-serif; /* Consistent modern font */
+}
+.date-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.date-group label {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =============================== */
+/* ✅ Table Styling (Same as manageshop) ✅ */
+/* =============================== */
+
+/* Table container for scroll and centering */
+.table-container {
+  overflow-x: auto; /* Enable horizontal scroll on smaller screens */
+  margin: 20px auto; /* Center with top margin */
+  width: 95%; /* Responsive width */
+  max-width: 1200px; /* Max limit */
+  border-radius: 12px; /* Rounded border */
+  box-shadow: 0 2px 8px rgba(90, 70, 61, 0.2); /* Soft shadow */
+}
+
+/* Base table styling */
+.shop-table {
+  width: 100%; /* Full width */
+  border-collapse: separate; /* Use separate borders */
+  border-spacing: 0; /* Remove spacing between cells */
+  font-family: 'Hind', sans-serif;
+  background-color: #fffaf5; /* Light cream background */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Table header and data cells */
+.shop-table th,
+.shop-table td {
+  border: 1px solid #d4cfc7; /* Light border */
+  padding: 12px 15px; /* Inner spacing */
+  text-align: center;
+  font-size: 15px;
+  color: #3c2f27; /* Dark brown text */
+}
+
+/* Header row specific styling */
+.shop-table thead th {
+  background-color: #2e2e2e; /* Dark background for contrast */
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Table body cell background */
+.shop-table tbody td {
+  background-color: #fffdf9; /* Slightly lighter background */
+}
+
+/* =============================== */
+/* ✅ Filters Styling ✅ */
+/* =============================== */
+
+/* Filter section wrapper */
+.filters {
+  margin: 20px auto;
+  display: flex; /* Horizontal layout */
+  justify-content: center; /* Center align */
+  align-items: center;
+  gap: 20px; /* Space between filters */
+  font-family: 'Hind', sans-serif;
+}
+
+/* Label beside dropdown */
+.filters label {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #5a463d; /* Soft brown */
+}
+
+/* Filter dropdowns */
+.filters select {
+  padding: 8px 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fffdf9;
+  color: #3c2f27;
+  font-family: 'Hind', sans-serif;
+  outline: none;
+  cursor: pointer;
+  border-color: #d4af37; /* Golden border */
+}
+
+/* =============================== */
+/* ✅ Button Styling ✅ */
+/* =============================== */
+
+/* Common button styles */
+.edit-btn, .delete-btn {
+  padding: 8px 16px;
+  font-size: 15px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Hind', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* Edit button */
+.edit-btn {
+  background-color: #d4af37; /* Golden background */
+}
+
+.edit-btn:hover {
+  background-color: #5a463d; /* Dark brown on hover */
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #d4af37;
+}
+
+.delete-btn:hover {
+  background-color: #5a463d;
+}
+
+/* =============================== */
+/* ✅ Offer Form Box ✅ */
+/* =============================== */
+
+/* Wrapper for form section */
+.offer-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Form card styling */
+.offer-form-box {
+  background-color: white;
+  padding: 40px 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Elevation effect */
+  width: 100%;
+  max-width: 550px;
+  border: 1px solid #e1dcd2; /* Soft border */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Form heading */
+.offer-form-box h2 {
+  margin-bottom: 25px;
+  font-family: 'Playfair Display', serif;
+  color: #2e2e2e;
+  font-size: 26px;
+}
+
+/* Form layout */
+.offer-form-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input, dropdown, textarea, button styles */
+.offer-form-box input,
+.offer-form-box select,
+.offer-form-box textarea,
+.offer-form-box button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: 'Hind', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Input fields and dropdowns */
+.offer-form-box input,
+.offer-form-box select,
+.offer-form-box textarea {
+  border: 1px solid #bbb; /* Light gray border */
+}
+
+/* Textarea specific */
+.offer-form-box textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Submit button */
+.offer-form-box button {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.offer-form-box button:hover {
+  background-color: #bfa134; /* Slightly darker gold */
+}
+
+/* =============================== */
+/* ✅ Modal Styling ✅ */
+/* =============================== */
+
+/* Background overlay */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full height */
+  background-color: rgba(60, 50, 40, 0.7); /* Transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Above page content */
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #f8f6f1;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(90, 70, 61, 0.3); /* Depth effect */
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  font-family: 'Playfair Display', serif;
+}
+
+/* =============================== */
+/* ✅ Delete Confirmation Modal ✅ */
+/* =============================== */
+
+/* Text inside delete modal */
+#deleteModal .modal-content p {
+  font-size: 18px;
+  font-family: 'Hind', sans-serif;
+  color: #3c2f27;
+  margin-bottom: 20px;
+}
+
+
+/* =============================== */
+/* ✅ Modal Input Styling ✅ */
+/* =============================== */
+
+/* Input and textarea inside modal */
+.modal-content input,
+.modal-content textarea {
+  width: 90%; /* Takes most of modal width */
+  margin: 10px auto; /* Centered with spacing */
+  padding: 10px; /* Comfortable padding inside */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 16px;
+  display: block; /* Force block layout */
+  font-family: 'Hind', sans-serif;
+}
+
+/* =============================== */
+/* ✅ Modal Action Buttons ✅ */
+/* =============================== */
+
+/* Wrapper for buttons inside modal */
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 20px; /* Space between buttons */
+}
+
+/* Styling for each modal button */
+.modal-actions button {
+  background-color: #d4af37; /* Gold color */
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for modal buttons */
+.modal-actions button:hover {
+  background-color: #5a463d; /* Dark brown on hover */
+}
+
+/* =============================== */
+/* ✅ Delete Modal Styling ✅ */
+/* =============================== */
+
+/* Entire delete modal backdrop */
+.delete-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1001; /* Above normal content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Semi-transparent background */
+}
+
+/* Content box inside delete modal */
+.delete-modal-content {
+  background-color: #fffdf9;
+  margin: 12% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  font-family: 'Hind', sans-serif;
+  border-radius: 10px;
+}
+
+/* Confirmation message inside modal */
+.delete-modal-content p {
+  color: #3c2f27;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Buttons inside delete modal */
+.delete-modal-content button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  background-color: #d4af37;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Hind', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for delete buttons */
+.delete-modal-content button:hover {
+  background-color: #e0c350; /* Slightly brighter gold */
+}
+
+/* =============================== */
+/* ✅ RESPONSIVE MEDIA QUERIES ✅ */
+/* =============================== */
+
+/* 📱 Mobile Devices (max width 600px) */
+@media (max-width: 600px) {
+  main {
+    padding: 30px 10px; /* Reduced side padding */
+  }
+
+  .offer-form-box {
+    padding: 25px 20px;
+    margin: 20px auto;
+  }
+
+  .offer-form-box h2 {
+    font-size: 22px;
+  }
+
+  .offer-form-box input,
+  .offer-form-box select,
+  .offer-form-box textarea,
+  .offer-form-box button {
+    font-size: 14px; /* Slightly smaller text */
+    padding: 10px;
+    margin-bottom: 14px;
+  }
+
+  .filters {
+    flex-direction: column; /* Stack filters */
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  .filters label {
+    font-size: 14px;
+  }
+
+  .filters select {
+    font-size: 14px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .shop-table th,
+  .shop-table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .modal-content {
+    padding: 20px 15px;
+    width: 75%;
+  }
+
+  .modal-content input,
+  .modal-content textarea {
+    font-size: 15px;
+    width: 75%;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-actions button {
+    width: 100%; /* Full width buttons */
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .delete-modal-content {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .delete-modal-content button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
+
+/* 💻 Tablets (max width 1024px) */
+@media (max-width: 1024px) {
+  .filters {
+    flex-wrap: wrap; /* Wrap if overflow */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .offer-form-box {
+    max-width: 90%;
+  }
+
+  .shop-table th,
+  .shop-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 14px;
+  }
+
+  .modal-content {
+    max-width: 70%;
+  }
+}
+
+/* =============================== */
+/* ✅ Column Width Adjustments ✅ */
+/* =============================== */
+
+/* Last column of table - actions */
+table td:last-child,
+table th:last-child {
+  min-width: 180px; /* Ensures buttons don't stack */
+  text-align: center;
+}
+
+/* 5th column - offers/description */
+.shop-table td:nth-child(5),
+.shop-table th:nth-child(5) {
+  width: 300px; /* Wide enough for long text */
+  min-width: 250px;
+  text-align: left;
+}

@@ -1,0 +1,154 @@
+/* Reuse loginpg.css for header/footer, font, form, button styling */
+@import url("./manageshop.css"); /* Reuse styles from manageshop.css */
+
+/* ============================= */
+/* Main Content Styling Section */
+/* ============================= */
+
+main {
+  padding: 40px 20px; /* Add padding around the main content */
+  text-align: center; /* Center align text inside main */
+}
+
+main h2 {
+  font-family: 'Playfair Display', serif; /* Elegant heading font */
+  font-size: 30px; /* Large heading size */
+  color: #5a463d; /* Brownish heading color */
+  margin-bottom: 25px; /* Space below heading */
+}
+
+/* ============================= */
+/* Filter Section Styling */
+/* ============================= */
+
+.filters {
+  display: flex; /* Arrange filter elements in a row */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 20px; /* Space between label and dropdown */
+  font-family: 'Hind', sans-serif; /* Clean sans-serif font */
+  margin-bottom: 25px; /* Space below filters */
+}
+
+.filters label {
+  font-weight: bold; /* Bold label text */
+  color: #5a463d; /* Brownish text color */
+}
+
+.filters select {
+  padding: 8px 12px; /* Inner spacing in dropdown */
+  font-size: 15px; /* Medium font size */
+  border-radius: 6px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light grey border */
+  font-family: 'Hind', sans-serif; /* Consistent font with UI */
+  background-color: #fffdf9; /* Light cream background */
+  color: #3c2f27; /* Dark brown text */
+  outline: none; /* Remove focus border */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* ============================= */
+/* Category Flip Card Layout Fixed - Facility Style */
+/* ============================= */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 40px; /* spacing between cards */
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 20px;
+  justify-content: center; /* centers whole grid */
+  align-items: start;
+}
+
+/* OFFSET last row cards for 5-card layout */
+.category-grid .category-card:nth-child(4) {
+  margin-left: 200px; /* move 4th card a bit to the right, between Card1 & Card2 */
+}
+
+.category-grid .category-card:nth-child(5) {
+  margin-left: 200px; /* move 5th card slightly right, between Card2 & Card3 */
+}
+
+
+/* Flip card wrapper */
+.category-card {
+  width: 100%;
+  height: 220px; /* fixed height to prevent shift */
+  perspective: 1000px; /* 3D space for flip */
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Inner flip */
+.category-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+/* Flip on hover */
+.category-card:hover .category-card-inner {
+  transform: rotateY(180deg); /* flips in place */
+}
+
+/* Front & Back common */
+.category-front,
+.category-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* hides back when front visible */
+  border-radius: 14px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Hind', sans-serif;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Front side */
+.category-front {
+  background: linear-gradient(135deg, #d4af37, #f1d27a); /* gold gradient */
+  color: #2e231b;
+}
+
+.category-front h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+/* Back side */
+.category-back {
+  background-color: #2e2e2e; /* blackish like header/footer */
+  color: #f5f5f5;
+  transform: rotateY(180deg); /* flipped */
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.category-back ul {
+  list-style: none; /* no bullets */
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+.category-back li {
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.category-back h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; /* slightly bigger */
+  color: #d4af37;
+  margin-bottom: 10px;
+}

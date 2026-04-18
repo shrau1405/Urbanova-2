@@ -1,0 +1,305 @@
+/* Inherits from loginpg.css */
+
+/* Heading style */
+h2 {
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  font-size: 32px; /* Large font size */
+  color: #2e2e2e; /* Charcoal black color */
+  margin-bottom: 30px; /* Space below heading */
+  text-align: center; /* Center align the heading */
+}
+
+/* Filter section styling */
+.filters {
+  margin-top: 10px; /* Space above filters */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 10px; /* Space between filter items */
+}
+
+/* Filter label text style */
+.filters label {
+  font-weight: bold; /* Bold label text */
+  color: #5a463d; /* Brown color */
+}
+
+/* Dropdown select style */
+.filters select {
+  padding: 8px 10px; /* Inner spacing */
+  font-size: 15px; /* Medium font size */
+  border-radius: 6px; /* Rounded corners */
+  border: 1px solid #d4af37; /* Golden border */
+  background-color: #fffdf9; /* Light cream background */
+  color: #3c2f27; /* Dark brown text */
+  font-family: 'Hind', sans-serif; /* Sans-serif font */
+  margin-bottom: 20px; /* Space below select */
+}
+
+/* Table container for shops */
+.shop-table {
+  width: 100%; /* Full width */
+  border-collapse: separate; /* Keep borders separate */
+  border-spacing: 0; /* No space between borders */
+  font-family: 'Hind', sans-serif; /* Font for table content */
+  background-color: #fffaf5; /* Light cream background */
+  border-radius: 12px; /* Rounded table corners */
+  overflow: hidden; /* Hide overflow content */
+}
+
+/* Table header and cell styles */
+.shop-table th,
+.shop-table td {
+  border: 1px solid #d4cfc7; /* Light grey border */
+  padding: 12px 15px; /* Inner spacing */
+  text-align: center; /* Center align text */
+  font-size: 15px; /* Medium font size */
+  color: #3c2f27; /* Dark brown text */
+}
+
+/* Table header row styling */
+.shop-table thead th {
+  background-color: #2e2e2e; /* Dark background */
+  font-weight: 600; /* Semi-bold text */
+  color: #ffffff; /* White text */
+}
+
+/* Table body row styling */
+.shop-table tbody td {
+  background-color: #fffdf9; /* Light cream rows */
+}
+
+/* Edit & Delete button styles */
+.edit-btn,
+.delete-btn {
+  background-color: #d4af37; /* Golden color */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 8px 16px; /* Button padding */
+  margin: 4px 2px; /* Button margin */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 15px; /* Medium text */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-family: 'Hind', sans-serif; /* Font */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for Edit & Delete buttons */
+.edit-btn:hover,
+.delete-btn:hover {
+  background-color: #5a463d; /* Dark brown on hover */
+}
+
+/* Padding for table container */
+.table-container {
+  padding: 0 30px; /* Horizontal spacing */
+}
+
+/* Rounded corner for bottom-left cell of last row */
+.shop-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+/* Rounded corner for bottom-right cell of last row */
+.shop-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+/* ===================== */
+/* Modal (popup) styling */
+/* ===================== */
+
+/* Full-screen modal background */
+.modal {
+  position: fixed; /* Overlay entire screen */
+  top: 0; left: 0; width: 100%; height: 100%; /* Full screen */
+  background-color: rgba(60, 50, 40, 0.7); /* Semi-transparent dark bg */
+  display: flex; /* Flex to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 999; /* On top of other elements */
+}
+
+/* Modal box styling */
+.modal-content {
+  background-color: #f8f6f1; /* Light background */
+  padding: 30px 25px; /* Inner spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(90, 70, 61, 0.3); /* Drop shadow */
+  text-align: center; /* Center text */
+  max-width: 500px; /* Limit modal width */
+  width: 80%; /* Responsive width */
+  font-family: 'Playfair Display', serif; /* Elegant font */
+}
+
+/* Input fields inside modal */
+.modal-content input {
+  width: 90%; /* Wide input */
+  padding: 10px; /* Inner spacing */
+  margin: 15px auto; /* Vertical spacing and center */
+  border: 1px solid #ccc; /* Grey border */
+  border-radius: 6px; /* Rounded input */
+  font-size: 16px; /* Medium font */
+  display: block; /* Block element */
+  font-family: 'Hind', sans-serif; /* Font */
+}
+
+/* Modal button group layout */
+.modal-actions {
+  display: flex; /* Arrange buttons horizontally */
+  justify-content: center; /* Center the group */
+  gap: 20px; /* Space between buttons */
+}
+
+/* Modal buttons style */
+.modal-actions button {
+  background-color: #d4af37; /* Golden background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 8px 16px; /* Button spacing */
+  font-size: 15px; /* Medium text */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+}
+
+/* Hover effect for modal buttons */
+.modal-actions button:hover {
+  background-color: #5a463d; /* Darker background on hover */
+}
+
+/* ========================= */
+/* Delete Confirmation Modal */
+/* ========================= */
+
+/* Hidden by default */
+.delete-modal {
+  display: none; /* Hide initially */
+  position: fixed; /* Overlay */
+  left: 0; top: 0; width: 100%; height: 100%; /* Full screen */
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+  z-index: 1000; /* Above regular modal */
+}
+
+/* Modal box for delete confirmation */
+.delete-modal-content {
+  background-color: #fffdf9; /* Light background */
+  margin: 15% auto; /* Center vertically */
+  padding: 20px; /* Inner spacing */
+  width: 90%; /* Responsive width */
+  max-width: 400px; /* Max width */
+  text-align: center; /* Centered content */
+  border-radius: 10px; /* Rounded corners */
+  font-family: 'Hind', sans-serif; /* Font */
+}
+
+/* Delete modal text */
+.delete-modal-content p {
+  font-weight: bold; /* Bold warning text */
+  color: #3c2f27; /* Dark brown color */
+  margin-bottom: 20px; /* Space below */
+}
+
+/* Delete modal buttons */
+.delete-modal-content button {
+  padding: 8px 16px; /* Button padding */
+  background-color: #d4af37; /* Golden background */
+  border: none; /* No border */
+  color: white; /* White text */
+  font-size: 15px; /* Medium text */
+  border-radius: 5px; /* Rounded */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Hover effect on delete modal buttons */
+.delete-modal-content button:hover {
+  background-color: #5a463d; /* Darker on hover */
+}
+
+/* =============================== */
+/* ✅ RESPONSIVE MEDIA QUERIES ✅ */
+/* =============================== */
+
+/* For small devices like phones (≤600px) */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 24px; /* Smaller heading */
+    margin-bottom: 20px; /* Less spacing */
+  }
+
+  .filters {
+    flex-direction: column; /* Stack vertically */
+    align-items: flex-start; /* Align left */
+    padding: 0 15px; /* Inner spacing */
+    gap: 10px; /* Gap between elements */
+  }
+
+  .filters label {
+    font-size: 14px; /* Smaller label text */
+  }
+
+  .filters select {
+    font-size: 14px; /* Smaller dropdown text */
+    width: 100%; /* Full width */
+  }
+
+  .shop-table th,
+  .shop-table td {
+    font-size: 13px; /* Smaller table text */
+    padding: 8px; /* Less padding */
+  }
+
+  .modal-content {
+    padding: 20px 15px; /* Less inner space */
+    width: 95%; /* More compact modal */
+  }
+
+  .modal-content input {
+    width: 100%; /* Full width input */
+    font-size: 14px; /* Smaller text */
+    padding: 8px; /* Less padding */
+  }
+
+  .modal-actions {
+    flex-direction: column; /* Stack buttons */
+    gap: 12px; /* Space between stacked buttons */
+  }
+
+  .modal-actions button {
+    font-size: 14px; /* Smaller text */
+    padding: 10px; /* Larger padding */
+    width: 100%; /* Full width buttons */
+  }
+
+  .delete-modal-content {
+    width: 95%; /* More compact modal */
+    font-size: 14px; /* Smaller text */
+  }
+
+  .delete-modal-content button {
+    font-size: 14px; /* Smaller text */
+    padding: 10px; /* Bigger buttons */
+    margin: 5px 0; /* Vertical spacing */
+    width: 100%; /* Full width */
+  }
+}
+
+/* For tablets and smaller laptops (≤1024px) */
+@media (max-width: 1024px) {
+  .filters {
+    flex-wrap: wrap; /* Allow wrapping filters */
+    justify-content: center; /* Center them */
+  }
+
+  .shop-table th,
+  .shop-table td {
+    font-size: 14px; /* Slightly smaller font */
+  }
+
+  .modal-content {
+    max-width: 90%; /* Restrict modal size */
+  }
+
+  .delete-modal-content {
+    max-width: 90%; /* Restrict modal size */
+  }
+}
