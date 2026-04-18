@@ -1,0 +1,132 @@
+<!DOCTYPE html> <!-- Declares the document as HTML5 -->
+<html lang="en"> <!-- Sets the document language to English -->
+<head>
+  <meta charset="UTF-8" /> <!-- Sets character encoding to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Makes the page responsive on all devices -->
+  <title>Manage Category & Floor</title> <!-- Sets the browser tab title -->
+
+  <!-- Linking to common login page styles -->
+  <link rel="stylesheet" href="../css/Loginpg.css" />
+
+  <!-- Linking to this page's specific styles -->
+  <link rel="stylesheet" href="../css/managecategoryfloor.css" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo-section"> <!-- Container for logo and brand text -->
+      <img src="https://cdn-icons-png.flaticon.com/128/3681/3681755.png" class="logo" alt="Urbanova Logo"/> <!-- Urbanova logo -->
+      <div class="brand-text"> <!-- Brand title and tagline -->
+        <h1>Urbanova</h1> <!-- Brand name -->
+        <p class="tagline">Shop Your Heart Out</p> <!-- Tagline -->
+      </div>
+    </div>
+
+    <div class="social-icons"> <!-- Social media icons section -->
+      <a href="#"><i class="fab fa-facebook-f"></i></a> <!-- Facebook icon -->
+      <span>|</span>
+      <a href="#"><i class="fab fa-instagram"></i></a> <!-- Instagram icon -->
+      <span>|</span>
+      <a href="#"><i class="fab fa-twitter"></i></a> <!-- Twitter icon -->
+    </div>
+  </header>
+
+<br><br> <!-- Line spacing -->
+
+<!-- Page Title -->
+<h2>Manage Category & Floor</h2>
+
+  <!-- Filter to switch between Category and Floor tables -->
+  <div class="filters">
+    <label for="viewSwitch">View:</label> <!-- Label for view switch -->
+    <select id="viewSwitch"> <!-- Dropdown to switch views -->
+      <option value="category">Category Table</option> <!-- Default option -->
+      <option value="floor">Floor Table</option> <!-- Floor option -->
+    </select>
+  </div>
+
+  <!-- Category Table Section -->
+  <div class="table-container" id="categoryTableContainer">
+    <table class="shop-table"> <!-- Category table -->
+      <thead>
+        <tr>
+          <th>Category Name</th> <!-- Table column headers -->
+          <th>Shop Names</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="categoryList"></tbody> <!-- Table body will be populated by JS -->
+    </table>
+  </div>
+
+  <!-- Floor Table Section (initially hidden) -->
+  <div class="table-container" id="floorTableContainer" style="display:none;">
+    <table class="shop-table"> <!-- Floor table -->
+      <thead>
+        <tr>
+          <th>Floor Name</th> <!-- Table column headers -->
+          <th>Shops on Floor</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="floorList"></tbody> <!-- Table body will be populated by JS -->
+    </table>
+  </div>
+
+  <!-- Edit Modal Section -->
+  <div class="modal" id="editModal" style="display:none;"> <!-- Hidden modal for editing -->
+    <div class="modal-content">
+      <h3>Edit</h3> <!-- Modal title -->
+      <input type="text" id="editName" /> <!-- Input field for new name -->
+      <div class="modal-actions"> <!-- Modal buttons -->
+        <button id="saveEditBtn">Save</button> <!-- Save button -->
+        <button id="cancelEditBtn">Cancel</button> <!-- Cancel button -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="delete-modal" id="deleteModal"> <!-- Delete confirmation modal -->
+    <div class="delete-modal-content">
+      <p>Are you sure you want to delete this entry?</p> <!-- Confirmation text -->
+      <button id="confirmDeleteBtn">Yes</button> <!-- Confirm button -->
+      <!-- ✅ Corrected ID -->
+      <button id="cancelDeleteBtn">Cancel</button> <!-- Cancel button -->
+    </div>
+  </div>
+
+<br><br> <!-- Line spacing -->
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container"> <!-- Wrapper for footer columns -->
+
+      <!-- About Us column -->
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>
+          Urbanova is a one-stop mall platform that connects shops and customers seamlessly.
+          We aim to empower rural merchants by providing them visibility and sales opportunity through our web app.
+          Enjoy a variety of categories, offers, and convenient shopping from any location.
+        </p>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Address: 123 Urbanova Lane, City Center</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Email: support@urbanova.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript logic for managing category and floor -->
+  <script type="module" src="../js/managecategoryfloor.js"></script>
+
+</body>
+</html>

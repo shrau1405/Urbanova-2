@@ -1,0 +1,127 @@
+<!DOCTYPE html> <!-- Declares the document as HTML5 -->
+<html lang="en"> <!-- Sets the language of the document to English -->
+<head>
+  <meta charset="UTF-8" /> <!-- Sets character encoding to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Ensures responsive layout on all devices -->
+  <title>Manage Offer Details</title> <!-- Title displayed in the browser tab -->
+  
+  <!-- Link to common login page styles -->
+  <link rel="stylesheet" href="../css/Loginpg.css" />
+  
+  <!-- Link to manage offers page specific styles -->
+  <link rel="stylesheet" href="../css/manageoffers.css" />
+  
+  <!-- Import Google Font: Hind -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome icons CDN for using social media and UI icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Header section starts -->
+  <header>
+    <div class="logo-section"> <!-- Container for logo and brand name -->
+      <img src="https://cdn-icons-png.flaticon.com/128/3681/3681755.png" class="logo" alt="Urbanova Logo" /> <!-- Urbanova logo image -->
+      <div class="brand-text"> <!-- Text section beside logo -->
+        <h1>Urbanova</h1> <!-- Brand name -->
+        <p class="tagline">Shop Your Heart Out</p> <!-- Tagline under brand name -->
+      </div>
+    </div>
+
+    <div class="social-icons"> <!-- Social media icons -->
+      <a href="#"><i class="fab fa-facebook-f"></i></a> <!-- Facebook icon -->
+      <span>|</span>
+      <a href="#"><i class="fab fa-instagram"></i></a> <!-- Instagram icon -->
+      <span>|</span>
+      <a href="#"><i class="fab fa-twitter"></i></a> <!-- Twitter icon -->
+    </div>
+  </header>
+  <!-- Header section ends -->
+
+  <!-- Main content starts -->
+  <main>
+    <div class="offer-form-container"> <!-- Container for the offer form -->
+      <div class="offer-form-box"> <!-- Inner box containing the form -->
+        <h2>Add Offer</h2> <!-- Heading for form section -->
+        
+        <!-- Form to add new offers -->
+        <form id="offerForm">
+          <input type="text" id="shopName" placeholder="Enter Shop Name" required /> <!-- Input for shop name -->
+          <input type="text" id="category" placeholder="Category" readonly /> <!-- Auto-filled category (read-only) -->
+          <input type="text" id="floor" placeholder="Floor" readonly /> <!-- Auto-filled floor (read-only) -->
+          <input type="text" id="offerTitle" placeholder="Offer Title" required /> <!-- Input for offer title -->
+          <textarea id="description" placeholder="Description" required></textarea> <!-- Textarea for offer description -->
+          <input type="text" id="startDate" placeholder="Start Date (yyyy-mm-dd)" required
+          pattern="\d{4}-\d{2}-\d{2}" title="Enter date in yyyy-mm-dd format" />
+
+          <input type="text" id="endDate" placeholder="End Date (yyyy-mm-dd)" required
+          pattern="\d{4}-\d{2}-\d{2}" title="Enter date in yyyy-mm-dd format" />
+
+          <input type="text" id="discount" placeholder="Discount (e.g. 20%)" required /> <!-- Discount amount -->
+          <button type="submit">Add Offer</button> <!-- Submit button -->
+        </form>
+      </div>
+    </div>
+
+    <!-- Filters for category and floor -->
+    <div class="filters">
+      <label for="categoryFilter">Filter by Category:</label> <!-- Label for category filter -->
+      <select id="categoryFilter"></select> <!-- Dropdown to filter by category -->
+
+      <label for="floorFilter">Filter by Floor:</label> <!-- Label for floor filter -->
+      <select id="floorFilter"></select> <!-- Dropdown to filter by floor -->
+    </div>
+
+    <!-- Table to display all offers -->
+    <div class="table-container">
+      <table class="shop-table"> <!-- Offers table -->
+        <thead>
+          <tr>
+            <th>Shop Name</th> <!-- Table heading -->
+            <th>Category</th>
+            <th>Floor</th>
+            <th>Offer Title</th>
+            <th>Description</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Discount</th>
+            <th>Actions</th> <!-- Column for edit/delete actions -->
+          </tr>
+        </thead>
+        <tbody id="offer-list"></tbody> <!-- Table body where offers will be dynamically inserted -->
+      </table>
+    </div>
+  </main>
+  <!-- Main content ends -->
+
+  <!-- Footer section starts -->
+  <footer>
+    <div class="footer-container"> <!-- Wrapper for footer columns -->
+      
+      <!-- About Us column -->
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>
+          Urbanova is a one-stop mall platform that connects shops and customers seamlessly.
+          We aim to empower rural merchants by providing them visibility and sales opportunity through our web app.
+          Enjoy a variety of categories, offers, and convenient shopping from any location.
+        </p>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Address: 123 Urbanova Lane, City Center</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Email: support@urbanova.com</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer section ends -->
+
+  <!-- JavaScript module to handle offer logic -->
+  <script type="module" src="../js/manageoffers.js"></script>
+  
+</body>
+</html>

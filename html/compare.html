@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive viewport settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Page title -->
+  <title>Compare Products - Urbanova</title>
+
+  <!-- Import general layout styles -->
+  <link rel="stylesheet" href="../css/Loginpg.css" />
+
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="../css/compare.css" />
+
+  <!-- Import fonts from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind&family=Playfair+Display&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo-section">
+      <!-- Mall logo -->
+      <img src="https://cdn-icons-png.flaticon.com/128/3681/3681755.png" class="logo" alt="Urbanova Logo"/>
+
+      <!-- Branding -->
+      <div class="brand-text">
+        <h1>Urbanova</h1>
+        <p class="tagline">Shop Your Heart Out</p>
+      </div>
+    </div>
+
+    <!-- Social media icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <span>|</span>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <span>|</span>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Heading -->
+    <h2>Compare  Offers</h2>
+
+    <!-- Offer Listing Table -->
+    <div class="table-container">
+      <table class="shop-table">
+        <thead>
+          <tr>
+            <th>Select</th>         <!-- Checkbox to select offers -->
+            <th>Shop Name</th>      <!-- Shop offering the product -->
+            <th>Offer Title</th>    <!-- Name of the offer -->
+            <th>Discount (%)</th>   <!-- Discount percentage -->
+            <th>Start Date</th>     <!-- Offer start date -->
+            <th>End Date</th>       <!-- Offer end date -->
+          </tr>
+        </thead>
+        <tbody id="offerTableBody"></tbody> <!-- Offers inserted dynamically using JS -->
+      </table>
+    </div>
+
+    <!-- Comparison Output Table -->
+    <div id="comparisonContainer" style="display: none;">
+      <h3>Offer Comparison</h3>
+      <table class="shop-table">
+        <thead>
+          <tr>
+            <th>Field</th>     <!-- Attribute being compared -->
+            <th>Offer 1</th>   <!-- First selected offer -->
+            <th>Offer 2</th>   <!-- Second selected offer -->
+          </tr>
+        </thead>
+        <tbody id="comparisonTable"></tbody> <!-- Comparison results inserted dynamically -->
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <!-- About Us -->
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>
+          Urbanova is a one-stop mall platform that connects shops and customers seamlessly.
+          We aim to empower rural merchants by providing them visibility and sales opportunity through our web app.
+          Enjoy a variety of categories, offers, and convenient shopping from any location.
+        </p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Address: 123 Urbanova Lane, City Center</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Email: support@urbanova.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JS to handle comparison logic -->
+  <script type="module" src="../js/compare.js"></script>
+</body>
+</html>

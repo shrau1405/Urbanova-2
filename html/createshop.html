@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Ensure proper rendering on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title -->
+  <title>Create Shop Details</title>
+
+  <!-- External CSS for login page styles (shared styles) -->
+  <link rel="stylesheet" href="../css/Loginpg.css" />
+
+  <!-- CSS for this specific shop creation page -->
+  <link rel="stylesheet" href="../css/createshop.css" />
+
+  <!-- Google Fonts: Hind and Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind&family=Playfair+Display&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ===== HEADER SECTION ===== -->
+  <header>
+    <!-- Logo and Brand Name -->
+    <div class="logo-section">
+      <img src="https://cdn-icons-png.flaticon.com/128/3681/3681755.png" class="logo" alt="Urbanova Logo" />
+      <div class="brand-text">
+        <h1>Urbanova</h1>
+        <p class="tagline">Shop Your Heart Out</p>
+      </div>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <span>|</span>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <span>|</span>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </header>
+
+  <!-- ===== MAIN SECTION ===== -->
+  <main>
+    <!-- Page heading -->
+    <h2>Create Shop Details</h2>
+
+    <!-- Shop submission form -->
+    <form class="shop-form" id="shop-form">
+      <!-- Shop Name -->
+      <input type="text" id="shop-name" placeholder="Shop Name" required />
+
+      <!-- Owner Name -->
+      <input type="text" id="owner-name" placeholder="Owner Name" required />
+
+      <!-- Category Dropdown -->
+      <select id="category" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Food Court">Food Court</option>
+        <option value="Jewelry">Jewelry</option>
+        <option value="Books & Stationery">Books & Stationery</option>
+      </select>
+
+      <!-- Floor Dropdown -->
+      <select id="floor" required>
+        <option value="" disabled selected>Select Floor</option>
+        <option value="Ground">Ground Floor</option>
+        <option value="1st">1st Floor</option>
+        <option value="2nd">2nd Floor</option>
+        <option value="3rd">3rd Floor</option>
+      </select>
+
+      <!-- Contact Number -->
+      <input type="tel" id="contact" placeholder="Contact Number" required />
+
+      <!-- Email -->
+      <input type="email" id="email" placeholder="Email" required />
+
+      <!-- Shop Description -->
+      <textarea id="description" placeholder="Shop Description" rows="4" required></textarea>
+
+      <!-- Optional Website URL -->
+      <input type="url" id="website" placeholder="Shop Website URL (optional)" />
+
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+
+      <!-- Message Element for success/error display -->
+      <div id="form-message" style="margin-top: 10px;"></div>
+    </form>
+  </main>
+
+  <!-- ===== FOOTER SECTION ===== -->
+  <footer>
+    <div class="footer-container">
+      <!-- About Us Column -->
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>Urbanova is a one-stop mall platform that connects shops and customers seamlessly.
+        We aim to empower rural merchants by providing them visibility and sales opportunity through our web app.
+        Enjoy a variety of categories, offers, and convenient shopping from any location.</p>
+      </div>
+
+      <!-- Contact Info Column -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Address: 123 Urbanova Lane, City Center</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Email: support@urbanova.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+
+  <!-- Firebase setup/config -->
+  <script type="module" src="../js/firebase.js"></script>
+
+  <!-- Shop form submission logic -->
+  <script type="module" src="../js/createshop.js"></script>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</body>
+</html>

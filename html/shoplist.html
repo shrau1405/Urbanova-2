@@ -1,0 +1,118 @@
+<!DOCTYPE html> <!-- Define the document as HTML5 -->
+<html lang="en"> <!-- Set language to English -->
+<head>
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <title>Urbanova | List of Shop Details</title> <!-- Page title in browser tab -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Responsive view for all devices -->
+
+  <!-- External stylesheet for common login page styles (header, form, footer, etc.) -->
+  <link rel="stylesheet" href="../css/Loginpg.css" />
+
+  <!-- Styles specific to the shop list page -->
+  <link rel="stylesheet" href="../css/shoplist.css" />
+
+  <!-- Google Fonts: Hind and Playfair Display for text styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind&family=Playfair+Display&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome icons for social media and more -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+
+<body>
+<!-- ========================
+        Header Section
+========================= -->
+<header>
+  <div class="logo-section">
+    <!-- Mall logo image -->
+    <img src="https://cdn-icons-png.flaticon.com/128/3681/3681755.png" class="logo" alt="Urbanova Logo"/>
+
+    <!-- Brand title and tagline -->
+    <div class="brand-text">
+      <h1>Urbanova</h1>
+      <p class="tagline">Shop Your Heart Out</p>
+    </div>
+  </div>
+
+  <!-- Social media icons (Facebook | Instagram | Twitter) -->
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <span>|</span>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <span>|</span>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</header>
+
+<!-- ========================
+        Main Content
+========================= -->
+<main>
+  <!-- Main heading of the page -->
+  <h2>All Shop Details</h2>
+
+  <!-- Filters section for category and floor -->
+  <div class="filters">
+    <!-- Filter by category -->
+    <label for="categoryFilter">Category:</label>
+    <select id="categoryFilter"></select>
+
+    <!-- Filter by floor -->
+    <label for="floorFilter">Floor:</label>
+    <select id="floorFilter"></select>
+  </div>
+
+  <!-- Scrollable table container for responsive layout -->
+  <div class="table-container">
+    <table class="shop-table">
+      <!-- Table headers for shop details -->
+      <thead>
+        <tr>
+          <th>Shop Name</th>
+          <th>Owner</th>
+          <th>Category</th>
+          <th>Floor</th>
+          <th>Contact</th>
+          <th>Email</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+
+      <!-- Dynamic rows will be inserted here via JavaScript -->
+      <tbody id="shopList"></tbody>
+    </table>
+  </div>
+</main>
+
+<!-- ========================
+          Footer
+========================= -->
+<footer>
+  <div class="footer-container">
+    <!-- About Urbanova -->
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>
+        Urbanova is a one-stop mall platform that connects shops and customers seamlessly.
+        We aim to empower rural merchants by providing them visibility and sales opportunity through our web app.
+        Enjoy a variety of categories, offers, and convenient shopping from any location.
+      </p>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>Address: 123 Urbanova Lane, City Center</p>
+      <p>Phone: +91-9876543210</p>
+      <p>Email: support@urbanova.com</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ========================
+     JavaScript Import
+========================= -->
+<!-- Module script to handle fetching and rendering shop list -->
+<script type="module" src="../js/shoplist.js"></script>
+</body>
+</html>

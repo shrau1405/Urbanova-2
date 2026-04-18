@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Setup -->
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Ensures responsiveness on all devices -->
+  <title>Urbanova - Home</title> <!-- Page title in browser tab -->
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/Loginpg.css" /> <!-- Shared login page styles (for header/footer etc) -->
+  <link rel="stylesheet" href="../css/userhome.css" /> <!-- Specific styling for user homepage -->
+  <link rel="stylesheet" href="../css/manageshop.css"> <!-- Reusing shop styles -->
+
+  <!-- Google Fonts: Hind and Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind&family=Playfair+Display&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+  <!-- =============================== -->
+  <!-- ✅ HEADER SECTION ✅ -->
+  <!-- =============================== -->
+  <header>
+    <div class="logo-section">
+      <!-- App Logo -->
+      <img src="https://cdn-icons-png.flaticon.com/128/3681/3681755.png" class="logo" alt="Urbanova Logo"/>
+      <div class="brand-text">
+        <h1>Urbanova</h1> <!-- Brand Name -->
+        <p class="tagline">Shop Your Heart Out</p> <!-- Tagline -->
+      </div>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <span>|</span>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <span>|</span>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </header>
+
+  <!-- =============================== -->
+  <!-- ✅ MAIN USER OPTIONS SECTION ✅ -->
+  <!-- =============================== -->
+  <main>
+    <h2>Welcome to Urbanova</h2> <!-- Main heading -->
+
+    <!-- User Navigation Buttons -->
+    <div class="user-options">
+      <button class="nav-btn" onclick="navigate('category')">Category Wise Details</button> <!-- Navigate to category details -->
+      <button class="nav-btn" onclick="navigate('floorwise')">Floor Wise Details</button> <!-- Navigate to floor details -->
+      <button class="nav-btn" onclick="navigate('shoplist')">List of Shop Details</button> <!-- All shops list -->
+
+      <button class="nav-btn" onclick="navigate('shopwise')">Shop Wise Offers</button> <!-- Offers per shop -->
+      <button class="nav-btn" onclick="navigate('compare')">Compare Offers</button> <!-- Product comparison -->
+      <button class="nav-btn" onclick="navigate('viewshop')">View Shop Details</button> <!-- View full shop info -->
+    </div>
+  </main>
+
+  <!-- =============================== -->
+  <!-- ✅ FOOTER SECTION ✅ -->
+  <!-- =============================== -->
+  <footer>
+    <div class="footer-container">
+
+      <!-- About Urbanova Column -->
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>Urbanova is a one-stop mall platform that connects shops and customers seamlessly.
+        We aim to empower rural merchants by providing them visibility and sales opportunity through our web app.
+        Enjoy a variety of categories, offers, and convenient shopping from any location.</p>
+      </div>
+
+      <!-- Contact Details Column -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Address: 123 Urbanova Lane, City Center</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Email: support@urbanova.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================== -->
+  <!-- ✅ SCRIPT FILE ✅ -->
+  <!-- =============================== -->
+  <script src="../js/userhome.js"></script> <!-- JS file that handles navigation logic -->
+</body>
+</html>

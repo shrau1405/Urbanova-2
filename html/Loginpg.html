@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata and page title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Urbanova - Login</title>
+
+  <!-- Link to external login page CSS -->
+  <link rel="stylesheet" href="../css/Loginpg.css" />
+
+  <!-- Font Awesome icons (CDN) for social/media icons -->
+  <!-- ✅ REPLACE this in your <head> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Duplicate Font Awesome link (can remove one if preferred) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ======= HEADER SECTION ======= -->
+  <header>
+    <div class="logo-section">
+      <!-- Brand logo image -->
+      <img src="https://cdn-icons-png.flaticon.com/128/3681/3681755.png" class="logo" alt="Urbanova Logo" />
+      
+      <!-- Brand title and tagline -->
+      <div class="brand-text">
+        <h1>Urbanova</h1>
+        <p>Shop Your Heart Out</p>
+      </div>
+    </div>
+
+    <!-- Social media icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <span>|</span>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <span>|</span>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </header>
+
+  <!-- ======= LOGIN SECTION ======= -->
+  <div class="login-container">
+    <div class="login-box">
+      <!-- Login heading -->
+      <h2>Login</h2>
+
+      <!-- Role selection dropdown -->
+      <select id="role" required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+      </select>
+
+      <!-- Email and password input fields -->
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+
+      <!-- Login button -->
+      <button onclick="login()">Login</button>
+
+      <!-- Error message container -->
+      <div id="error" class="error"></div>
+    </div>
+  </div>
+
+  <!-- ======= FOOTER SECTION ======= -->
+  <footer>
+    <div class="footer-container">
+      <!-- About Us column -->
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>Urbanova is a one-stop mall platform that connects shops and customers seamlessly.
+        We aim to empower rural merchants by providing them visibility and sales opportunity through our web app.
+        Enjoy a variety of categories, offers, and convenient shopping from any location.</p>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Address: 123 Urbanova Lane, City Center</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Email: support@urbanova.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======= SCRIPTS ======= -->
+
+  <!-- Firebase initialization and config (imported as ES module) -->
+  <script type="module" src="../js/firebase.js"></script>
+
+  <!-- Login functionality (imported as ES module) -->
+  <script type="module" src="../js/Loginpg.js"></script>
+
+</body>
+</html>

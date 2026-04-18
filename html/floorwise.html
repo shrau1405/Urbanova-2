@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character encoding and responsive design -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Page title -->
+  <title>Floor Wise Details - Urbanova</title>
+
+  <!-- Linking shared styles and page-specific CSS files -->
+  <link rel="stylesheet" href="../css/Loginpg.css" /> <!-- Reuses common styles (header, footer, etc.) -->
+  <link rel="stylesheet" href="../css/floorwise.css" /> <!-- Custom styles for this page -->
+  <link rel="stylesheet" href="../css/categorywise.css" /> <!-- Possibly reused styles like table layout -->
+
+  <!-- Google Fonts: 'Hind' for body, 'Playfair Display' for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind&family=Playfair+Display&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome icons (for social icons in header/footer) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Header section containing logo, brand name, and social icons -->
+  <header>
+    <div class="logo-section">
+      <!-- Urbanova logo -->
+      <img src="https://cdn-icons-png.flaticon.com/128/3681/3681755.png" class="logo" alt="Urbanova Logo" />
+
+      <!-- Brand name and tagline -->
+      <div class="brand-text">
+        <h1>Urbanova</h1>
+        <p>Shop Your Heart Out</p>
+      </div>
+    </div>
+
+    <!-- Social media links -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <span>|</span>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <span>|</span>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+  <h2>Floor Wise Details</h2>
+  <div class="category-grid" id="floorList"></div>
+</main>
+
+
+  <!-- Footer section with about info and contact details -->
+  <footer>
+    <div class="footer-container">
+      <!-- About Us column -->
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>Urbanova is a one-stop mall platform that connects shops and customers seamlessly.
+        We aim to empower rural merchants by providing them visibility and sales opportunity through our web app.
+        Enjoy a variety of categories, offers, and convenient shopping from any location.</p>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Address: 123 Urbanova Lane, City Center</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Email: support@urbanova.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Linking JavaScript for dynamic table rendering (uses Firebase most likely) -->
+  <script type="module" src="../js/floorwise.js"></script>
+</body>
+</html>
